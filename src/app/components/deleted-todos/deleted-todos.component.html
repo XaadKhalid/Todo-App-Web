@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <h3>Deleted Todos</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">Completed?</th>
+                <th scope="col">Deleted Date</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let todo of listofDeletedtodos">
+                <td>{{ todo.description }}</td>
+                <td>{{ todo.createdDate | date : 'MM/dd/yyyy hh:mm a'}}</td>
+                <td>{{ todo.isCompleted }}</td>
+                <td>{{ todo.deletedDate | date : 'MM/dd/yyyy hh:mm a' }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
